@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cola de Banco</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cola del Banco</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+  <div class="container">
+    <h1>Cola del Banco</h1>
+    <div id="queue" class="queue">
+      <!-- Se muestran los clientes en la cola -->
+    </div>
+    <input type="text" id="clientNameInput" placeholder="Nombre del Cliente">
+    <input type="number" id="positionInput" placeholder="Posición">
+    <button id="addClientBtn">Agregar Cliente</button>
+    <button id="serveClientBtn">Atender Cliente</button>
+  </div>
+
+  <script src="script.js"></script> <!-- Tu script JavaScript -->
 </body>
 </html>
