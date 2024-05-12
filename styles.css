@@ -1,0 +1,64 @@
+* {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+#queue {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#service {
+    border-top: 1px solid grey;
+    background: lightgrey;
+}
+
+#current-client {
+    background: white;
+    margin: auto;
+    margin-bottom: 50px;
+    height: 100px;
+}
+
+#current-client div {
+    background: #77CBB9;
+    border-radius: 50%;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+}
+
+#queue div {
+    background: #5896E6;
+    border-radius: 50%;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+}
+
+.queue-controls {
+    width: 100%;
+    background: #FFCE63;
+    padding: 0 20px;
+}
+
+.queue-controls button {
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    background: white;
+    color: #2e2e2e;
+    border: none;
+}
+
+.queue-controls input {
+    font-size: 1rem;
+    padding: 5px;
+}
