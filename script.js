@@ -3,27 +3,20 @@ const queueElement = document.getElementById('queue');
 const addClientBtn = document.getElementById('addClientBtn');
 const serveClientBtn = document.getElementById('serveClientBtn');
 const clientNameInput = document.getElementById('clientNameInput');
-const positionInput = document.getElementById('positionInput');
 
 // Se crea una cola con 5 clientes predeterminados
 let queue = ['Juan', 'María', 'Pedro', 'Laura', 'Carlos'];
 
-// Función para agregar un cliente a la cola en una posición específica
+// Función para agregar un cliente a la cola al final
 function addClient() {
   const clientName = clientNameInput.value.trim();
-  const position = parseInt(positionInput.value);
 
   if (clientName === '') {
     alert('Por favor ingresa el nombre del cliente.');
     return;
   }
 
-  if (isNaN(position) || position < 1 || position > queue.length + 1) {
-    alert('Por favor ingresa una posición válida.');
-    return;
-  }
-
-  queue.splice(position - 1, 0, clientName);
+  queue.push(clientName);
   renderQueue();
 }
 
