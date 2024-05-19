@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cola del Banco</title>
+  <title>Simulación de Cola de Banco</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <h1 style="text-align: center;">Cola de Banco</h1>
+
   <div class="container">
-    <h1>Cola del Banco</h1>
-    <div id="queue" class="queue">
-      <!-- Se muestran los clientes en la cola -->
+    <div>
+      <h2>Tablero de Turnos</h2>
+      <ul id="tableroTurnos">
+        <!-- Aquí se añaden dinámicamente los clientes -->
+      </ul>
+      <input type="text" id="nombreCliente" placeholder="Nombre del cliente">
+      <button onclick="agregarCliente()">Agregar Cliente</button>
     </div>
-    <input type="text" id="clientNameInput" placeholder="Nombre del Cliente">
-    <input type="number" id="positionInput" placeholder="Posición">
-    <button id="addClientBtn">Agregar Cliente</button>
-    <button id="serveClientBtn">Atender Cliente</button>
+    <div class="cajeros-container">
+      <div class="cajero">
+        <h2>Cajero 1</h2>
+        <div id="cajero1">Cajero 1: Disponible</div>
+      </div>
+      <div class="cajero">
+        <h2>Cajero 2</h2>
+        <div id="cajero2">Cajero 2: Disponible</div>
+      </div>
+      <div class="cajero">
+        <h2>Cajero 3</h2>
+        <div id="cajero3">Cajero 3: Disponible</div>
+      </div>
+    </div>
+    <div>
+      <button onclick="atenderCliente()">Atender Cliente</button>
+    </div>
   </div>
 
-  <script src="script.js"></script> <!-- Tu script JavaScript -->
+  <div class="cola-container">
+    <div class="tablero">
+      <h2>Cola de Banco</h2>
+      <div id="cola">
+        <!-- Aquí se añaden dinámicamente los turnos -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
